@@ -116,8 +116,6 @@ def download_range(br, from_date, to_date):
     # select the format we want
     field  = 'frmentermemorableinformation1:strEnterMemorableInformation_memInfo{0}'
     br['frmTest:strExportFormatSelected'] = ['Quicken 98 and 2000 and Money (.QIF)']
-    
-    print br['frmTest:strExportFormatSelected'].value()
 
     response = br.submit()
     info = response.info()
