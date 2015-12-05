@@ -165,7 +165,7 @@ def parse_date_range(string):
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-u', '--user-id', type=int, required=True)
+    parser.add_argument('-u', '--user-id', required=True)
     parser.add_argument('date_ranges', nargs='+', metavar='YYYY/MM/DD--YYYY/MM/DD',
                         type=parse_date_range,
                         help="""One or more date ranges to download statements
