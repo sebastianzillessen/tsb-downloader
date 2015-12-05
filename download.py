@@ -120,7 +120,7 @@ def download_range(br, from_date, to_date):
     response = br.submit()
     info = response.info()
 
-    if info.gettype() != 'application/csv' & info.gettype() != 'text/x-qif':
+    if info.gettype() != 'application/csv' and info.gettype() != 'text/x-qif':
         print info.headers
         print response.getcode()
         print response.read()
